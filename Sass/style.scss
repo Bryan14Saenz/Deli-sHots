@@ -1,5 +1,6 @@
 @import '__header';
 @import '__inicio';
+@import '__menu';
 @import '__footer';
 
 // Estilos generales
@@ -18,4 +19,24 @@ body {
 #main {
   overflow-x: hidden;
   margin: 20px;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.btn {
+  transition: all 0.5s ease;
+  padding: 5px 10px;
+  color: $colorTercero;
+  background-color: $colorSegundo;
+
+  &:hover {
+    color: $colorSegundo;
+    background-color: $colorTercero;
+  }
+}
+
+.oculto {
+  display: none;
 }

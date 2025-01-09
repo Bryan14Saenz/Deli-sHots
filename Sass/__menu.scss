@@ -1,0 +1,49 @@
+@import '__variables';
+@import '__mixin';
+
+.main-menu {
+  @include display();
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .card-group {
+    .card {
+      img {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card-body {
+        h5 {
+          font-size: 1.2rem;
+        }
+
+        p {
+          font-size: 1rem;
+
+          small {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+#menu-check:checked ~ .oculto {
+  display: block;
+}
+
+#menu-check:not(:checked) ~ .oculto {
+  display: none;
+}
