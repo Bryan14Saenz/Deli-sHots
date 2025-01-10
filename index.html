@@ -35,9 +35,11 @@
     <header id="header">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <!-- Logo -->
+          <a class="navbar-brand" href="index.html">
             <img src="Assets/Img/Icono.png" alt="Logo" />
           </a>
+          <!-- Botón desplegable -->
           <button
             class="navbar-toggler"
             data-bs-toggle="collapse"
@@ -45,13 +47,14 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+          <!-- Contenido del desplegable -->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="#">Inicio</a>
+                <a class="nav-link" href="index.html">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Menu</a>
+                <a class="nav-link" href="#menu">Menu</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -62,13 +65,19 @@
                   Pedidos
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Reservacion</a></li>
-                  <li><a class="dropdown-item" href="#">Para llevar</a></li>
-                  <li><a class="dropdown-item" href="#">Delivery</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#reservacion">Reservacion</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#obtener">Para llevar</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#entrega">Delivery</a>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Contacto</a>
+                <a href="#footer" class="nav-link">Contacto</a>
               </li>
             </ul>
           </div>
@@ -82,6 +91,7 @@
       <section class="main-inicio">
         <h1>Deli`s Hots</h1>
         <p>El Mejor Servicio De Hot Dogs</p>
+        <!-- Carrusel de imágenes -->
         <div class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -104,9 +114,10 @@
       </section>
 
       <!-- Menu -->
-      <section class="main-menu">
+      <section id="menu" class="main-menu">
         <h2>Menu</h2>
         <p>Estos son algunas de nuestras mejores delicias</p>
+        <!-- Tarjetas del menu -->
         <div class="card-group">
           <input type="checkbox" name="menu-check" id="menu-check" />
           <div class="card">
@@ -205,19 +216,231 @@
             </div>
           </div>
         </div>
+        <!-- Botón de ver mas -->
         <label for="menu-check" class="btn">
           <i class="bi bi-arrow-down">Ver mas</i>
         </label>
+      </section>
+
+      <!-- Publicidad -->
+
+      <!-- Pedidos -->
+      <section class="main-pedidos">
+        <h2>Pedidos</h2>
+        <p>
+          Selecciona la forma en que quieres disfrutar de nuestros Hot Dogs.
+        </p>
+        <!-- Dropdown de pedidos -->
+        <div class="dropdown">
+          <!-- Botón desplegable -->
+          <button class="btn" data-bs-toggle="dropdown">
+            Selecciona el tipo de pedido
+          </button>
+          <!-- Contenido del desplegable -->
+          <ul class="dropdown-menu">
+            <li>
+              <label for="reservaciones">Reservaciones</label>
+            </li>
+            <li>
+              <label for="paraLlevar">Para llevar</label>
+            </li>
+            <li>
+              <label for="delivery">Delivery</label>
+            </li>
+          </ul>
+        </div>
+        <!-- Selector de secciones -->
+        <input type="radio" id="reservaciones" name="pantalla" hidden />
+        <input type="radio" id="paraLlevar" name="pantalla" hidden />
+        <input type="radio" id="delivery" name="pantalla" hidden />
+        <!-- Contenido de las secciones -->
+        <div id="reservacion" class="section reservaciones">
+          <h2>Reservaciones</h2>
+          <p>Reserva un lugar en nuestro local.</p>
+          <!-- Formulario -->
+          <div class="formulario">
+            <form>
+              <div class="form-group">
+                <label for="nombre">Nombre y Apellido</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Escribe tu nombre"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="teléfono"
+                  placeholder="Escribe tu teléfono"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha" name="fecha" required />
+              </div>
+              <div class="form-group">
+                <label for="personas"># de Personas</label>
+                <input
+                  type="number"
+                  id="personas"
+                  name="personas"
+                  placeholder="Escribe el número de personas"
+                  value="4"
+                  min="1"
+                  max="4"
+                  required
+                />
+              </div>
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+        <div id="obtener" class="section paraLlevar">
+          <h2>Para llevar</h2>
+          <p>Encarga uno de nuestros producto y visitanos para recibirlo.</p>
+          <!-- Formulario -->
+          <div class="formulario">
+            <form>
+              <div class="form-group">
+                <label for="nombre">Nombre y Apellido</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Escribe tu nombre"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="teléfono"
+                  placeholder="Escribe tu teléfono"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="producto">Nombre del Producto</label>
+                <input
+                  type="text"
+                  id="producto"
+                  name="producto"
+                  placeholder="Escribe el producto a encargar"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="cantidad">Descripcion</label>
+                <input
+                  type="text"
+                  id="cantidad"
+                  name="cantidad"
+                  placeholder="Escribe la cantidad"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="tamaño">Tamaño</label>
+                <select name="tamaño" id="tamaño" required>
+                  <option value="chico">Chico</option>
+                  <option value="mediano">Mediano</option>
+                  <option value="grande">Grande</option>
+                  <option value="familiar">Jumbo</option>
+                </select>
+              </div>
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+        <div id="entrega" class="section delivery">
+          <h2>Delivery</h2>
+          <p>Encarga nuestro productos y los llevamos a tu domicilio.</p>
+          <!-- Formulario -->
+          <div class="formulario">
+            <form>
+              <div class="form-group">
+                <label for="nombre">Nombre y Apellido</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Escribe tu nombre"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="teléfono"
+                  placeholder="Escribe tu teléfono"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="dirección">Dirección</label>
+                <input
+                  type="text"
+                  id="direccion"
+                  name="dirección"
+                  placeholder="Escribe tu dirección"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="producto">Nombre del Producto</label>
+                <input
+                  type="text"
+                  id="producto"
+                  name="producto"
+                  placeholder="Escribe el producto a encargar"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="cantidad">Descripcion</label>
+                <input
+                  type="text"
+                  id="cantidad"
+                  name="cantidad"
+                  placeholder="Escribe la cantidad"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="tamaño">Tamaño</label>
+                <select name="tamaño" id="tamaño" required>
+                  <option value="chico">Chico</option>
+                  <option value="mediano">Mediano</option>
+                  <option value="grande">Grande</option>
+                  <option value="familiar">Jumbo</option>
+                </select>
+              </div>
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
       </section>
     </main>
 
     <!-- Footer -->
     <footer id="footer">
+      <!-- Seccion de correo -->
       <div class="footer-mailto fadeIn">
         <h2>Hablemos</h2>
         <p>Contactame para que creemos un proyecto juntos</p>
         <a href="mailto:14bryansaenz@gmail.com">Envíame un correo</a>
       </div>
+      <!-- Seccion de información y redes -->
       <div class="footer-info">
         <p>B14S</p>
         <p>

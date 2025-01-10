@@ -1,6 +1,9 @@
 @import '__variables';
 
 #header {
+  position: sticky;
+  top: 0px;
+  z-index: 3;
   background-color: $colorTercero;
 
   .navbar {

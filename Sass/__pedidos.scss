@@ -1,0 +1,120 @@
+@import '__variables';
+
+.main-pedidos {
+  margin-top: 20px;
+  text-align: center;
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .dropdown {
+    margin-top: 15px;
+    font-size: 1.2rem;
+
+    .btn {
+      background-color: $colorSegundo;
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      &:focus {
+        color: #00ffff;
+      }
+    }
+
+    .dropdown-menu {
+      background-color: $colorSegundo;
+      box-shadow: 0px 0px 5px 1px $colorSegundo;
+
+      label {
+        width: 100%;
+        font-size: 1.2rem;
+        margin: 5px;
+        padding: 5px;
+        color: $colorTercero;
+
+        &:hover {
+          cursor: pointer;
+          color: $colorSegundo;
+          background-color: $colorTercero;
+        }
+      }
+    }
+  }
+
+  .section {
+    display: none;
+    padding: 15px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    background-color: $colorTercero;
+  }
+
+  #reservaciones:checked ~ .reservaciones,
+  #paraLlevar:checked ~ .paraLlevar,
+  #delivery:checked ~ .delivery {
+    display: block;
+  }
+
+  .formulario {
+    form {
+      .form-group {
+        margin: 10px;
+
+        label {
+          font-size: 1.2rem;
+          margin: 5px;
+        }
+
+        input[type='text'],
+        input[type='tel'],
+        input[type='email'],
+        input[type='date'],
+        input[type='number'],
+        select {
+          outline: none;
+          font-size: 1.2rem;
+          width: 100%;
+          padding: 5px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          color: #333;
+
+          &:focus {
+            border-color: $colorSegundo;
+            box-shadow: 0 0 5px $colorSegundo;
+          }
+
+          &::placeholder {
+            color: #999;
+          }
+        }
+      }
+
+      button {
+        cursor: pointer;
+        border: none;
+        width: 100%;
+        font-size: 1.2rem;
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        transition: all 0.5s ease;
+        color: $colorTercero;
+        background-color: $colorSegundo;
+
+        &:hover {
+          color: $colorSegundo;
+          background-color: $colorTercero;
+          box-shadow: 0 0 5px $colorSegundo;
+        }
+      }
+    }
+  }
+}
