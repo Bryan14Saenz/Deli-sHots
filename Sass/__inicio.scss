@@ -30,3 +30,29 @@
     }
   }
 }
+
+@media (min-width: 992px) {
+  .main-inicio {
+    margin-top: 20px;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    .carousel {
+      width: 60%;
+      height: 200px;
+      margin: 0px auto;
+
+      .carousel-inner {
+        .carousel-item {
+          height: 200px;
+        }
+      }
+    }
+  }
+}
